@@ -78,8 +78,8 @@ if __name__ == "__main__":
 
     print("Encrypting and creating time-lock...")
     N, x, t, masked_key, iv, ciphertext = time_lock_encrypt(FILE_TO_ENCRYPT, DELAY_TIME)
-    if os.path.exists(file_path):
-        os.remove(file_path)  # Removes the original file
+    if os.path.exists(FILE_TO_ENCRYPT):
+        os.remove(FILE_TO_ENCRYPT)  # Removes the original file
     print(N)
     print(x)
     print(t)
